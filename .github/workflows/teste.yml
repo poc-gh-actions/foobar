@@ -1,0 +1,9 @@
+name: dispatch
+
+on: 
+  workflow_dispatch:
+
+jobs:
+  pipeline:
+    uses: poc-gh-actions/foobar/.github/workflows/main.yml@main
+    secrets: inherit
