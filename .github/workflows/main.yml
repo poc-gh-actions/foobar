@@ -1,0 +1,19 @@
+name: teste
+on:
+  workflow_call:
+    secrets:
+      REPO_SECRET:
+        required: true
+      ORG_SECRET:
+        required: true
+jobs:
+  snow:
+      name: teste
+      runs-on: ubuntu-latest
+      steps:     
+        - name: teste
+          run: |
+            repo=${{ secrets.REPO_SECRET }}
+            echo "repo ${repo:0:3}"
+            org=${{ secrets.ORG_SECRET }}
+            echo "org ${org:0:3}"
